@@ -1,0 +1,152 @@
+*{
+	p:#0B2239;
+	s:#4AD295;
+}
+
+.frame{
+	-fx-pref-width: 900px;
+	-fx-pref-height: 600px;
+	
+	}
+	
+.side_bar{
+	-fx-background-color: p;
+	-fx-pref-width: 150px;
+}
+
+
+.icon-wrap{
+	-fx-padding: 10px;
+	-fx-pref-height: 150px;
+	-fx-spacing: 10px;
+	-fx-alignment: center;
+	
+}
+.icon-wrap > Label{
+	-fx-font-family: Century;
+	-fx-font-size: 15px;
+	-fx-font-weight: bold;
+	-fx-text-fill: white; 
+}
+
+.nav-btn {
+	-fx-padding: 10px;
+	-fx-pref-height: 55px;
+	-fx-spacing: 10px;
+	-fx-alignment: center-left;
+}
+
+.active {
+	-fx-background-color: s;
+}
+.nav-btn:hover{
+	-fx-background-color: s;
+	-fx-cursor: hand;
+}
+.nv-btn .svg-holder{
+	-fx-pref-width:20px;
+	-fx-pref-height:20px;
+	-fx-alignment: center;
+	
+	
+	
+}
+.svg,.lbl{
+	-fx-fill: white;
+	-fx-font-size:15;
+	-fx-font-weight: bold;
+	-fx-text-fill: white;
+}
+.title-wrap{
+	-fx-pref-height: 80px;
+	-fx-alignment: center-left; 
+	-fx-padding: 10px;
+	}	
+
+.title-wrap > Label{
+	-fx-font-size:28px;
+	-fx-font-weight:bold;
+	}
+	
+.footer{
+	-fx-pref-height: 50px;
+	-fx-alignment: center;
+	-fx-padding: 10px;
+		
+	}
+	
+.view {
+	-fx-pref-width: 750px;
+	-fx-pref-height: 520px;
+		
+	}
+.sarch-bar{
+	-fx-pref-height: 70px;
+	-fx-padding: 10px;
+	-fx-spacing: 10px;
+	-fx-alignment: center-left;
+}
+
+.cat-box{
+	-fx-pref-width: 215px;
+	-fx-pref-height: 100px;
+	-fx-alignment: center;
+	-fx-border-color: p;
+	-fx-border-radius: 5px;
+	
+}
+.cat-box:hover{
+	-fx-background-color: p;
+	-fx-background-radius: 5px;
+	-fx-cursor: hand; 
+}
+.cat-box > Label {
+	-fx-text-fill: p;
+	-fx-font-size: 15px;
+}
+.cat-box:hover > Label {
+	-fx-text-fill:white;
+}
+.combo{
+	-fx-pref-width: 130px;
+	-fx-border-width: 1px;
+	-fx-border-color: p;
+	-fx-prompt-text-fill: p; 
+}
+.txt_fld{
+	-fx-pref-width:150px;
+	-fx-background-color: transparent;
+	-fx-border-width: 1px;
+	-fx-border-color: p;
+	-fx-prompt-text-fill: p; 
+	}	
+
+.dt-pick {
+-fx-pref-width:130px;
+	-fx-background-color: transparent;
+	-fx-border-width: 1px;
+	-fx-border-color: p;
+	-fx-prompt-text-fill: p; 	
+}
+.btn {
+	-fx-pref-width: 80px;
+	-fx-background-color: p;
+	-fx-text-fill: white;
+}	
+
+.btn:hover{
+	-fx-background-color: s; 	
+}
+
+.pad10 {
+	-fx-padding: 0 10 10 10;
+}
+ScrollPane{
+	-fx-fit-to-width: true;
+	-fx-padding: 0 20 10 10;
+}
+
+FlowPane{
+	-fx-hgap: 10px;
+	-fx-vgap: 10px;
+}
