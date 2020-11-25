@@ -80,6 +80,20 @@
                         <Label styleClass="lbl" text="Author" />
                      </children>
                   </HBox>
+                  <HBox onMouseClicked="#showSaleHistory" prefHeight="100.0" prefWidth="200.0" styleClass="nav-btn">
+                     <children>
+                        <HBox styleClass="svg-holder">
+                           <children>
+                              <HBox alignment="CENTER" styleClass="svg-holder">
+                                 <children>
+                                    <SVGPath content="M7.5 9h3v3h-3zM12 9h3v3h-3zM16.5 9h3v3h-3zM3 18h3v3h-3zM7.5 18h3v3h-3zM12 18h3v3h-3zM7.5 13.5h3v3h-3zM12 13.5h3v3h-3zM16.5 13.5h3v3h-3zM3 13.5h3v3h-3zM19.5 0v1.5h-3v-1.5h-10.5v1.5h-3v-1.5h-3v24h22.5v-24h-3zM21 22.5h-19.5v-16.5h19.5v16.5z" styleClass="svg" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                        <Label styleClass="lbl" text="Sale History" />
+                     </children>
+                  </HBox>
                </children>
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" styleClass="footer">

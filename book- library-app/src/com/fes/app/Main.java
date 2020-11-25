@@ -20,7 +20,7 @@ public class Main extends Application{
 		stage.getIcons().add(new Image(new FileInputStream("search.png")));
 		stage.setScene(scene);
 		stage.show();
-	}
+	} 
 	public static void main(String[] args) {
 		launch(args);
 	}

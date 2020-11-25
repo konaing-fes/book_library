@@ -1,12 +1,13 @@
 package com.fes.app.view;
 
-import com.fes.app.entity.CommonDTO;
+import com.fes.app.entity.SaleDetial;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 
 public class Home {
 	@FXML
@@ -18,7 +19,15 @@ public class Home {
 	@FXML
 	private DatePicker releasedDate;
 	@FXML  
-	private TableView<CommonDTO> tblist;
+	private TableView<SaleDetial> tblist;
+	
+	public void addToCart(MouseEvent event) {
+		
+		if(event.getClickCount()==2) {
+			
+		}
+		
+	}
 	
 	public void search() {
 		

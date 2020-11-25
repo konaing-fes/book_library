@@ -7,6 +7,14 @@ public class Book {
 	private int id;
 	private String name;
 	private int price;
+	private String image;
+	public String getImage() {
+		return image;
+	}
+	public void setImage(String image) {
+		this.image = image;
+	}
+
 	private LocalDate releaseDate;
 	private String remark;
 	
@@ -54,6 +62,14 @@ public class Book {
 	}
 	public void setCategory(Category category) {
 		this.category = category;
+	}
+	
+	public String getCategoryName() {
+		return category.getName();
+	}
+	
+	public String getAuthorName() {
+		return author.getName();
 	}
 
 }

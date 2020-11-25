@@ -58,7 +58,7 @@
 	-fx-text-fill: white;
 }
 .title-wrap{
-	-fx-pref-height: 80px;
+	-fx-pref-height: 70px;
 	-fx-alignment: center-left; 
 	-fx-padding: 10px;
 	}	
@@ -76,12 +76,14 @@
 	}
 	
 .view {
+	-fx-border-width: 15 0 0 0;
+	-fx-border-color: s;
 	-fx-pref-width: 750px;
 	-fx-pref-height: 520px;
 		
 	}
 .sarch-bar{
-	-fx-pref-height: 70px;
+	-fx-pref-height: 80px;
 	-fx-padding: 10px;
 	-fx-spacing: 10px;
 	-fx-alignment: center-left;
@@ -120,7 +122,9 @@
 	-fx-border-color: p;
 	-fx-prompt-text-fill: p; 
 	}	
-
+TextArea{
+	-fx-border-color: p; 
+}
 .dt-pick {
 -fx-pref-width:130px;
 	-fx-background-color: transparent;
@@ -149,4 +153,98 @@ ScrollPane{
 FlowPane{
 	-fx-hgap: 10px;
 	-fx-vgap: 10px;
+}
+
+.edit-view{
+	-fx-pref-width: 400px;
+	-fx-pref-height: 450px;
+}
+
+.edit-view-title-warp{
+	-fx-pref-height: 80px;
+	-fx-background-color: p;
+	-fx-alignment: center;
+}
+
+.edit-view-title-warp>Label{
+	-fx-font-size:30px;
+	-fx-text-fill: white;
+	-fx-font-weight: bold;
+}
+
+.info-warp{
+	-fx-pref-height: 25px;
+	-fx-alignment: center;	
+}
+
+.info-warp>Label{
+	-fx-font-size:12px;
+	-fx-text-fill: red;
+	
+}
+.detial-box{
+	-fx-spacing: 10px;
+	-fx-padding: 10px;
+	-fx-pref-width: 550px;
+	-fx-pref-height: 300px;
+}
+
+.cart-warp{
+	
+	-fx-pref-width: 320px;
+	
+}
+
+.cart-title-wrap{
+	-fx-alignment: center;
+	-fx-padding: 10px;
+	-fx-pref-height: 35px;
+}
+.cart-title-wrap > Label{
+	-fx-text-fill: p;
+	-fx-font-size: 14px;
+	-fx-font-weight: bold;
+}
+
+.cart-icon-wrap{
+	-fx-pref-width: 32px;
+	-fx-alignment: center-left;
+	-fx-padding: 10px;
+}
+
+.cart-icon-label{
+	-fx-text-fill: p;
+	-fx-font-size:14px;
+	-fx-font-weight: bold;
+}
+
+.cart-btn-wrap{
+	-fx-padding: 10px;
+	-fx-alignment: center;
+	-fx-spacing: 10px;
+	}
+
+.cart-btn-wrap>.cat-btn{
+	-fx-padding: 10px;
+	-fx-alignment: center;
+	-fx-spacing: 10px;
+	-fx-pref-width: 200px;
+	-fx-pref-height: 70px;
+	-fx-border-color: p;
+	-fx-border-radius: 5px;
+	
+}
+
+.cart-btn-wrap>.cat-btn> Label{
+	
+	-fx-font-size:12px;
+	-fx-font-weight: bold;
+ 
+	
+}
+
+.cart-btn-wrap>.cat-btn:hover{
+	-fx-background-color: s;
+	-fx-background-radius: 5px;
+	-fx-cursor: hand;
 }
