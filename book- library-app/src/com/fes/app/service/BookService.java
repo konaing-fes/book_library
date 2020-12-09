@@ -91,27 +91,33 @@ public class BookService {
 
 	}
 	public List<Book> findByAll(){
-		return findByParams(null, null, null);
+		return findByParams(null, null, null, null);
 	}
-	public List<Book> findByParams(Category category, Author authorName, LocalDate releaseDate){
+	public List<Book> findByParams(Category category, Author authorName, String bookName, LocalDate releaseDate){
 		List<Book> list = new ArrayList<>();
 		StringBuilder sb = new StringBuilder(sqlSearch);
 		List<Object> params = new LinkedList<>();
 		
 		if(null!=category) {
 			sb.append(" and c.name like ?");
-			params.add(category);
+			params.add(category.getName());
 		}
 		
 		if(null!=authorName) {
 		
 			sb.append(" and a.name like ?");
-			params.add(authorName);			
+			params.add(authorName.getName());			
 		}
 		
-		if(null!=releaseDate) {
+		if(null!=bookName && !bookName.isEmpty()) {
 			
-			sb.append(" and b.released_date >= ?");
+			sb.append("and b.name like ?");
+			params.add("%".concat(bookName).concat("%") );
+		}
+		
+		if(null!=releaseDate && releaseDate.isBefore(LocalDate.now())) {
+			
+			sb.append(" and released_date >= ?");
 			params.add(Date.valueOf(releaseDate));
 		}
 		

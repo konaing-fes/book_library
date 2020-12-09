@@ -1,5 +1,6 @@
 package com.fes.app.view;
 
+import java.io.IOException;
 import java.util.List;
 
 import com.fes.app.entity.Author;
@@ -32,20 +33,45 @@ public class AuthorList {
 	
 	private AuthorService authorSb;
 	
-	public void add() {
+	public void add() throws IOException {
 		
 		Author author = new Author();
-		if(!name.getText().isEmpty())
+		if(name.getText().isEmpty()) {
+			MessagesBox.show("Please Enter Author Name ");
+		}else {
+			
 		author.setName(name.getText());
 		
-		if(null!=age.getText()&& !age.getText().isEmpty()) {
-		author.setAge(Integer.parseInt(age.getText()));}
+		if(!age.getText().isEmpty()) {
+			
+			
+			
+			try {
+				
+				if(null!=age.getText()) {
+					
+					author.setAge(Integer.parseInt(age.getText()));}
+				
+			} catch (NumberFormatException e) {
+				MessagesBox.show("Enter Author Age (Number Only) ");
+			}
+			
+				
+			
+		}
 		
-		if(!country.getText().isEmpty())
-		author.setCountry(country.getText());
-		authorSb.add(author);		
-		clear();
-		search();
+		else {
+		
+			if(country.getText().isEmpty()) {
+				MessagesBox.show("Please Enter Author Contry ");
+			}else {
+				author.setCountry(country.getText());
+				authorSb.add(author);		
+				clear();
+				search();
+				}
+			
+		}}
 	}
 	
 	public void search() {
@@ -64,6 +90,7 @@ public class AuthorList {
 		
 	}
 	
+
 	@FXML
 	private void initialize() {
 		authorSb = AuthorService.getInstance();
@@ -95,10 +122,10 @@ public class AuthorList {
 			
 		});
 		
-		name.textProperty().addListener((a, b, c) -> search());
-		age.textProperty().addListener((a, b, c) -> search());
-		country.textProperty().addListener((a, b, c) -> search());
-		
+//		name.textProperty().addListener((a, b, c) -> search());
+//		age.textProperty().addListener((a, b, c) -> search());
+//		country.textProperty().addListener((a, b, c) -> search());
+//		
 	}
 
 }

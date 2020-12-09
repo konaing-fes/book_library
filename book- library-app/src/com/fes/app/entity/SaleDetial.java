@@ -79,7 +79,7 @@ public class SaleDetial {
 	
 	public int getSaleTax() {
 		
-		return sale.getTax();
+		return (int)(getSubTotal()*0.05);
 	}
 	
 	

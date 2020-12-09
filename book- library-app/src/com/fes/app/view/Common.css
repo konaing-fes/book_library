@@ -1,7 +1,11 @@
 *{
 	p:#0B2239;
 	s:#4AD295;
-}
+	b:#152467;
+	g:#154d67;
+	l:#FFFFFF;
+	bt:#4055B2;
+	}
 
 .frame{
 	-fx-pref-width: 900px;
@@ -247,4 +251,41 @@ FlowPane{
 	-fx-background-color: s;
 	-fx-background-radius: 5px;
 	-fx-cursor: hand;
+}
+.msg-box{
+	-fx-pref-width: 250px;
+	-fx-pref-height: 120px;
+}
+
+.login-wrap{
+	-fx-pref-height: 280px;
+	-fx-pref-width: 500px;
+	
+	-fx-background-color:g;
+}
+
+.login-wrap>.left{
+	-fx-pref-height: 250px;
+	-fx-pref-width: 200px;	
+	-fx-background-radius: 30px;
+	-fx-border-radius: 30px;
+	-fx-border-width: 2px;
+	-fx-border-color: l;
+	-fx-background-color:b;
+}
+
+.login-wrap>.left>image{
+	-fx-alignment: center;
+}
+
+.loglb{
+	-fx-text-fill: l;
+	-fx-font-size:17;
+	-fx-font-weight: bold;
+	-fx-alignment: center;
+	
+}
+.login-wrap>.right{
+
+	-fx-alignment: center;
 }

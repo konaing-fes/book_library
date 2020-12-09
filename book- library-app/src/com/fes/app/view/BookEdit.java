@@ -90,12 +90,14 @@ public class BookEdit {
 				throw new ApplicationException("Please Select Author Name");
 			
 			book.setName(bookName.getText());
-			if(null==bookName.getText()&&bookName.getText().isEmpty())
+			if(null==bookName.getText()||bookName.getText().isEmpty())
 				throw new ApplicationException("Please Enter Book Name");
 			
+			if(null==price.getText() || price.getText().isEmpty())
+			throw new ApplicationException("Please Enter Book Price");
+			
 			book.setPrice(Integer.parseInt(price.getText()));
-			if(null==price.getText() && price.getText().isEmpty())
-				throw new ApplicationException("Please Enter Book Price");
+			
 			
 			book.setReleaseDate(releasedDate.getValue());
 			if(null==releasedDate.getValue())

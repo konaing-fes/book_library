@@ -1,9 +1,12 @@
 package com.fes.app.entity;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class Book {
+public class Book implements Serializable {
 	
+	
+	private static final long serialVersionUID = 1L;
 	private int id;
 	private String name;
 	private int price;

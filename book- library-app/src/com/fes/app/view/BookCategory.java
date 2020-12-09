@@ -1,13 +1,13 @@
 package com.fes.app.view;
 
 import java.io.File;
-
+import java.io.IOException;
 import java.util.List;
 
 
 import com.fes.app.entity.Category;
 import com.fes.app.service.CategoryService;
-import com.sun.javafx.css.StyleCacheEntry.Key;
+import com.fes.app.util.ApplicationException;
 
 import javafx.fxml.FXML;
 
@@ -31,12 +31,26 @@ public class BookCategory {
 	private FlowPane catBoxHolder;
 	private CategoryService catService;
 
-	public void add() {
+	public void add() throws IOException {
 		
+	try {
+		if(name.getText().isEmpty()) {
+		
+			throw new ApplicationException("Please Enter Category Name");
+			
+		}else {
+			
 		Category c = new Category();
 		c.setName(name.getText());
+		
 		catService.add(c);
 		search();
+		}
+		
+	} catch (Exception e) {
+		MessagesBox.show(e.getMessage());
+		
+	}
 		
 	}
 	
@@ -46,8 +60,9 @@ public class BookCategory {
 		fc.setTitle("Choose Category");
 		fc.setSelectedExtensionFilter(new ExtensionFilter("Category", "*.txt","*.csv", "*.tsv"));
 		File file = fc.showOpenDialog(name.getScene().getWindow());
+		if(file!=null) {
 		catService.upload(file);
-		search();
+		search();}
 	}
 	
 	public void search() {
@@ -71,12 +86,21 @@ public class BookCategory {
 		search();
 		
 		name.textProperty().addListener((a, b, c) -> search());
-		name.setOnKeyPressed(e ->{
+		
+name.setOnKeyPressed(e ->{
 			
 			if(e.getCode().equals(KeyCode.ENTER)) {
-				add(); 
+				
+				try {
+					add();
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				 
 			}
 		});
+		
 	}
 	
 	

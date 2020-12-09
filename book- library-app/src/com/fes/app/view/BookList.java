@@ -43,9 +43,8 @@ public class BookList {
 	   }
 	   
 	   public void search() {
-		   tbList.getItems().clear();
-		   
-		   List<Book> bookList = bookService.findByParams(category.getValue(), authorName.getValue(), releasedDate.getValue());
+		   tbList.getItems().clear();		   
+		   List<Book> bookList = bookService.findByParams(category.getValue(), authorName.getValue(), null, releasedDate.getValue());
 		   tbList.getItems().addAll(bookList);
 	}
 	   public void clear() {
